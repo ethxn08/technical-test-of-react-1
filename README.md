@@ -1,6 +1,6 @@
 # Prueba tecnica para Juniors y Trainees de React
 
-# APIs:
+### APIs:
 
 --> Fats Random: https://catfact.ninja/fact
 --> Fats Random: https://caas.com/cat/says/hello

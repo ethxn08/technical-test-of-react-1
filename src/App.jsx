@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 const App = () => {
-  const CAT_ENDPOINT_IMAGE_URL = `https://caas.com/cat/says/${"firstWord"}?size=50&color=red&json=true`;
   const CAT_ENDPOINT_RANDOM_FACT = "https://catfact.ninja/fact";
   const [fact, setFact] = useState();
   const [image, setImage] = useState();
 
-  useEffect(() => {
+  const fetchData = () => {
     fetch(CAT_ENDPOINT_RANDOM_FACT)
       .then((res) => res.json())
       .then((data) => {
@@ -25,9 +24,17 @@ const App = () => {
             setImage(url);
           });
       });
+  };
+  useEffect(() => {
+    fetchData();
   }, []);
+
+  const newView = () => {
+    fetchData();
+  };
+
   return (
-    <div>
+    <div onClick={newView}>
       <h1>Fact App Cat</h1>
       {image && (
         <img

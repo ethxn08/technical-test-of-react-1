@@ -3,7 +3,7 @@
 # APIs:
 
 --> Fats Random: https://catfact.ninja/fact
---> Fats Random: https://caas.com/cat/says/hello
+--> Fats Random: https://caas.com/cat/says/hello?size=50&color=red&json=true
 
 # Descripcion
 
